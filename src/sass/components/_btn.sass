@@ -11,15 +11,16 @@ a.btn
 .btn
   // align-self: center // если кнпка находится во flex-контейнере и нужно выровнять ее по середине
   display: inline-block
-  background: $bgc
-  // border-radius: 20px
+  background: $red
+  border-radius: 20px
   // border: 2px solid $green
-  padding: 10px 32px
-  color: $white
-  @include font(700, 16, 18)
+  padding: 18px 37px
+  color: $bgc !important
+  @include font(600, 16, 18)
   text-align: center
   text-transform: uppercase
-  transition: background 0.5s ease-in-out, color 0.5s ease-in-out, transform 0.3s ease
+  transition: background 0.5s ease-in-out, color 0.5s ease-in-out, transform 0.3s ease, letter-spacing 0.3s ease
+  box-shadow: 4px 4px 7px 0 rgba(0, 0, 0, 0.25)
   &:focus
     outline: none
     // background: $gradient-dark
@@ -30,9 +31,10 @@ a.btn
     // color: $white
   @media (any-hover: hover) and (pointer: fine)
     &:hover
-      transform: translateY(-4px)
-      background: transparent
+      transform: translateY(1px)
+      // background: transparent
       color: $white
+      letter-spacing: 0.001em
   &-error
     margin-top: 20px
 

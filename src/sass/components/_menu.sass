@@ -114,7 +114,7 @@
       max-height: 500px
       opacity: 1
       pointer-events: initial
-      top: 60px
+      top: 36px
       transition: top 0.3s
       @include mediaPhone
         top: 0
@@ -151,8 +151,8 @@
       &:hover
         &::before
           width: 100%
-        &:last-child a
-          color: $red
+        // &:last-child a
+
 
     // уточнить!!!
     // &:last-child a
@@ -281,14 +281,25 @@
   // МЕНЮ ДЛЯ ЯЗЫКОВ
   // @import 'language-menu'
   &-languages
-    & li a::after
-      top: 0 !important
+    font-family: $font-second
+
+    & li
+      a
+        font-weight: 600
+        font-size: 16px
+        color: #f2590d
+        text-transform: uppercase
+      a::after
+        top: 0 !important
+    & li:before
+      content: none
     @include mediaPhone
       align-self: flex-end
       order: 1
       & li
         display: flex
         & a
+
           width: auto
           // order: 2
           &:hover
@@ -340,26 +351,12 @@
         padding-right: 0
 
 // подменю  
-.sub-menu
-  // visibility: hidden
-  // opacity: 0
-  // transition: all 0.5s ease
-  // height: 19px
-
-// .menu
-//   &-item-language
-//     @media (any-hover: hover) and (pointer: fine)
-//       &:hover
-//         .sub-menu
-//           pointer-events: auto
-//           margin-top: -5px
-//     @media (min-width: 768px)
-//       &._hover
-//         .menu__sub-list
-//           pointer-events: auto
-//           transform: translate(0px, 0px)
-
-//// мой код подменю
+.menu-dropdown
+  li
+    a
+      @media (any-hover: hover) and (pointer: fine)
+        &:hover
+          color: $bgc
 
 .language-menu
   z-index: 99
