@@ -1,4 +1,5 @@
 .header
+  position: relative
   padding: 32px 0
   box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.2)
   z-index: 3
@@ -8,13 +9,34 @@
   //   box-shadow: 0 1px 35px 0 rgba($black, 0.1)
   //   z-index: 100
   //   width: 100%
-  @include mediaPhone
+
+  transition: transform 0.28s ease, opacity 0.28s ease, box-shadow 0.28s ease, background-color 0.28s ease
+  will-change: transform, opacity
+
+  &.is-fixed
     position: fixed
     top: 0
     left: 0
     width: 100%
-    z-index: 7
-    background-color: $black
+    z-index: 100
+    transform: translateY(-110%)
+    opacity: 0
+    padding: 18px 0
+    backdrop-filter: blur(10px)
+
+    &.is-fixed.is-visible
+      transform: translateY(0)
+      opacity: 1
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25)
+
+
+  // @include mediaPhone
+  //   position: fixed
+  //   top: 0
+  //   left: 0
+  //   width: 100%
+  //   z-index: 7
+  //   background-color: $black
 
   &__container
     display: flex

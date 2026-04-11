@@ -29,6 +29,7 @@ $mobileSmall: 479.98px // Телефоны S - 480px
 
 :root
   --widthscrollbar: 17px
+  --header-offset: 0px
   // **********************************************
   // СДЕЛАТЬ ВЕРХНИЙ И НИЖНИЙ ОТСТУП У SECTION
   --sectionPaddingTop: 40px
@@ -42,7 +43,32 @@ $mobileSmall: 479.98px // Телефоны S - 480px
   -moz-osx-font-smoothing: grayscale
 
 %head
-  font-family: $font-second
-  @include font(600, 36, calc(42 * 1.2))
-  color: $bgc
-
+  border-bottom: 2px solid $text
+  // background-color: $text
+  // height: 1px
+  width: 100%
+  // bottom: -10px
+  padding-bottom: 10px
+  // margin-bottom: 28px
+  span
+    padding-bottom: 2px
+    position: relative
+    display: block
+    margin-left: auto
+    padding-left: 10px
+    font-family: $font-second
+    @include font(600, 36, calc(42 * 1.2))
+    line-height: 1.1
+    color: $bgc
+    text-transform: uppercase
+    background: $gradient-dark
+    max-width: 46.5%
+    &::before
+      content: ''
+      position: absolute
+      top: 0
+      bottom: 0
+      left: -56px
+      width: 46px
+      height: 42px
+      background: $text url("../images/icons/home.svg") center / 26px no-repeat

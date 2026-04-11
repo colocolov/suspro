@@ -29,19 +29,21 @@
       display: block
       line-height: 1.1
       text-align: right
+      &:nth-child(even)
+        font-size: 100px
     &--red
+      font-family: $font-second
       font-weight: 600
       font-size: 74px
       color: $red
-      &:nth-child(2)
-        font-size: 100px
     &--dark
       font-family: $font-first
       font-weight: 700
       font-size: 70px
       color: $text
-      &:nth-child(2)
-        font-size: 100px
+      background-image: linear-gradient(to right, #2f2f2f, #7f7f7f)
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
   &__img
     display: flex
     flex-basis: calc(50% - 8px)

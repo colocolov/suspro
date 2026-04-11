@@ -7,7 +7,8 @@ import "./modules/animateNumber.js";
 import "./modules/animateHeader.js";
 import "./modules/animateText.js";
 import "./modules/animateProgresLine.js";
-//import "./modules/dinam-adap.js";
+import "./modules/dinam-adap.js";
+import "./modules/stickyHeader.js";
 //import "./modules/main-slider.js";
 
 //import "./modules/modal.js";

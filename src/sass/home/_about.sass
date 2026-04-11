@@ -1,3 +1,49 @@
 .about
   padding-top: var(--sectionPaddingTop)
   padding-bottom: var(--sectionPaddingBottom)
+
+  &__container
+  &__head
+  &__wrap
+    display: flex
+    flex-wrap: wrap
+  &__item
+    flex-basis: 50%
+    padding: 40px
+    border-bottom: 2px solid $text
+    height: 373px
+    position: relative
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    &:nth-child(even)
+      &::before
+        content: ''
+        position: absolute
+        top: 23px
+        bottom: 23px
+        left: 0
+        width: 2px
+        height: 86.863271% // 324/373
+        background-color: $text
+    &:nth-child(odd)
+      &::after
+        content: ''
+        position: absolute
+        bottom: -3px
+        left: 0
+        width: 20px
+        height: 46px
+        background: $bgc url("../images/icons/bdl.svg") center / 20px 46px no-repeat
+        z-index: 5
+
+  &__text
+    max-width: 385px
+    text-align: justify
+
+  &__number
+    font-family: $font-second
+    font-weight: 600
+    font-size: 70px
+    margin-top: auto
+

@@ -22,6 +22,9 @@
   @extend %body
   background-color: $bgc
   color: $text
+  // для меню sticky
+  padding-top: var(--header-offset)
+  transition: padding-top 0.28s ease
   &._lock
     overflow: hidden !important
     height: 100% !important
