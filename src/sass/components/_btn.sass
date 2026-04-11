@@ -15,11 +15,12 @@ a.btn
   border-radius: 20px
   // border: 2px solid $green
   padding: 18px 37px
+  font-family: $font-second
   color: $bgc !important
-  @include font(600, 16, 18)
+  @include font(600, 16, 16)
   text-align: center
-  text-transform: uppercase
-  transition: background 0.5s ease-in-out, color 0.5s ease-in-out, transform 0.3s ease, letter-spacing 0.3s ease
+  // text-transform: uppercase
+  transition: background 0.5s ease-in-out, color 0.5s ease-in-out, transform 0.3s ease, letter-spacing 0.3s ease, box-shadow 0.5s ease-in-out
   box-shadow: 4px 4px 7px 0 rgba(0, 0, 0, 0.25)
   &:focus
     outline: none
@@ -35,6 +36,7 @@ a.btn
       // background: transparent
       color: $white
       letter-spacing: 0.001em
+      box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.2)
   &-error
     margin-top: 20px
 
@@ -43,22 +45,43 @@ a.btn
 .navigation
   display: flex
   align-items: center
+  position: absolute
+  top: 80px
+  left: 50%
+  transform: translateX(-50%)
+  width: 640px
+  display: flex
+  align-items: center
+  justify-content: space-between
+  @media screen and (max-width: 1359.98px)
+    width: 594px
+  @media screen and (max-width: 1179.98px)
+    width: 640px
+  @include mediaTablet
+    width: 735px
+  @include mediaPhone
+    width: 90%
+
   &__btn
-    width: 50px
-    height: 50px
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 102px
+    height: 40px
     cursor: pointer
     transition: transform 0.5s ease-in-out
+    background: $gradient-dark
     &-prev
-      img
-        transform: rotate(180deg)
+      transform: rotate(180deg)
       // transform: rotate(90deg)
       @media (any-hover: hover) and (pointer: fine)
         &:hover
           transform: translateX(-5px) rotate(180deg)
     &-svg
-      width: 100%
-      height: 100%
+      width: 51px
+      height: 11px
     &-next
+      background: linear-gradient(315deg, #2f2f2f 0%, transparent 100%) #7f7f7f
       @media (any-hover: hover) and (pointer: fine)
         &:hover
           transform: translateX(5px)

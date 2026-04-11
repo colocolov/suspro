@@ -1,0 +1,59 @@
+﻿<section class="calc" id="calc">
+  <div class="calc__container">
+    <h2 class="heading calc__head"><span>
+        калькулятор стоимости
+      </span></h2>
+  </div><!-- /.calc__container -->
+
+  <div class="calc__wrap">
+    <div class="calc__container">
+      <div class="calc__inner">
+        <div class="calc__text">
+          <h3 class="calc__title">Хотите узнать цену?</h3>
+          <p class="calc__subtitle">Заполните форму ниже, и мы вам перезвоним</p>
+        </div>
+
+        <form class="calc__form" id="calc-form" name="calc-form" action="#" method="post" novalidate>
+          <div class="calc__field calc__field--select">
+            <label class="calc__label" for="service">Выберите услугу</label>
+            <select class="calc__control calc__select" name="service" id="service" required>
+              <option value="" selected disabled>Выберите услугу</option>
+              <option value="dismantling">Демонтаж кровли</option>
+              <option value="deck-replacement">Замена настила</option>
+              <option value="full-installation">Полный монтаж новой кровли</option>
+            </select>
+          </div>
+
+          <div class="calc__row">
+            <div class="calc__field calc__field--select">
+              <label class="calc__label" for="material">Выберите материал</label>
+              <select class="calc__control calc__select" name="material" id="material" required>
+                <option value="" selected disabled>Выберите материал</option>
+                <option value="shingle">Гонт</option>
+                <option value="tile">Черепица</option>
+                <option value="metal-tile">Металлочерепица</option>
+              </select>
+            </div>
+
+            <div class="calc__field">
+              <label class="calc__label" for="area">Квадратные метры</label>
+              <input class="calc__control" type="number" name="area" id="area" min="0" max="500" step="1"
+                     inputmode="numeric" placeholder="Квадратные метры" required>
+            </div>
+          </div>
+
+          <div class="calc__field calc__field--phone">
+            <label class="calc__label" for="phone">Номер телефона</label>
+            <div class="calc__phone">
+              <span class="calc__prefix" aria-hidden="true">+373</span>
+              <input class="calc__control calc__control--phone" type="tel" name="phone" id="phone" inputmode="tel"
+                     placeholder="" pattern="^\d{2}\s\d{3}\s\d{3}$" autocomplete="tel-national" required>
+            </div>
+          </div>
+
+          <button class="btn-reset btn calc__submit" type="submit">Отправить</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section><!-- /.calc -->

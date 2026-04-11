@@ -1,0 +1,48 @@
+.services
+  padding-top: var(--sectionPaddingTop)
+  padding-bottom: var(--sectionPaddingBottom)
+
+  &__container
+  &__head
+  &__wrap
+    // display: flex
+    // flex-wrap: wrap
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    gap: 13px
+    margin: 80px 0
+    @include mediaTablet
+      grid-template-columns: repeat(2, 1fr)
+    @include mediaPhoneMid
+      grid-template-columns: 1fr
+
+  &__item
+    flex-basis: calc(25% - 13px)
+    @media (any-hover: hover) and (pointer: fine)
+      &:hover
+        img
+          transform: scale(1.05)
+        & .services__name
+          color: $red
+    &:nth-child(5)
+      grid-column: 2
+      @include mediaTablet
+        grid-column: auto
+    &:nth-child(6)
+      grid-column: 4
+      @include mediaTablet
+        grid-column: auto
+  &__img
+    padding-bottom: 100% // 330/1360
+    margin-bottom: 10px
+    overflow: hidden
+    img
+      transition: transform 0.7s ease-in
+  &__name
+    font-family: $font-second
+    font-weight: 600
+    font-size: 24px
+    transition: color 0.3s ease-in
+  &__btn
+    display: block
+    max-width: calc(50% - 8px)

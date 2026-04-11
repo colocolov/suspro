@@ -1,94 +1,43 @@
-// https://swiperjs.com/swiper-api
+﻿import Swiper, { Navigation } from "swiper";
 
-import _vars from "../_vars.js";
-import Swiper, { Navigation, Pagination, Autoplay, EffectFade, Parallax } from "swiper";
+Swiper.use([Navigation]);
 
-Swiper.use([Pagination, Navigation]);
+const portfolioSlider = document.querySelector(".portfolio__slider");
 
-// устанавливаем свой размер отступов через глобальную переменную --gap
-const gap = parseInt(getComputedStyle(document.documentElement).getPropertyValue("--gap"));
-console.log(gap);
-
-if (_vars.heroSliderEl) {
-
-  // слайдер на главной
-  new Swiper(_vars.heroSliderEl, {
-    // loop: true,
-    autoplay: {
-      //пауза между прокруткой
-      delay: 3000,
-      //закончить на последнем слайде
-      // stopOnLastSlide: false,
-      //отключить после ручного переключения
-      // disableOnInteraction: false,
-    },
-    //скорость переключения слайдов
-    speed: 800,
-    // навигация по стрелкам
-    navigation: {
-      nextEl: ".main-slider__btn-next",
-      prevEl: ".main-slider__btn-prev",
-      // disabledClass: "stories-button__unactive",
-      clickable: true,
-      // для ппрвильного направления
-    },
-    // буллеты
-    pagination: {
-      el: ".swiper-pagination",
-      type: "bullets",
-      clickable: true,
-      dynamicBullets: true,
-    },
-    //эффект перехода слайда (только если показ по 1-му слайду)
-    effect: "fade",
-    fadeEffect: {
-      crossFade: true,
-    },
-    // позволяет плавное появление слайдов вне контейнера
-    watchSlidesProgress: true,
-    // показ кол-ва слайдов (работает, когда откл effect: "fade")
-    slidesPerView: 1.2,
-    // расстояние между слайдами
-    // spaceBetween: gap, // свой размер
-    spaceBetween: 10,
-    // кол-во пролистываемых слайдов
-    slidesPerGroup: 1,
-    // стартовый слайд
-    initialSlide: 3,
-    // активный слайд по центру
+if (portfolioSlider) {
+  new Swiper(portfolioSlider, {
+    loop: true,
+    speed: 700,
     centeredSlides: true,
-    
-    // адаптив
+    slidesPerView: 2,
+    spaceBetween: 10,
+    initialSlide: 3, 
+    // watchSlidesProgress: true,
+
+    navigation: {
+      nextEl: ".portfolio--next",
+      prevEl: ".portfolio--prev",
+      clickable: true,
+    },
+
     breakpoints: {
-      // when window width is >= 320px
-      480: {
-        slidesPerView: 2,
+      0: {
+        spaceBetween: 12,
+      },
+      768: {
         spaceBetween: 20,
       },
-    },
-
-    //отложенная загрузка:
-    //отключаем презагрузку картинок
-    preloadImages: false,
-    lazy: {
-      loadOnTransitionStart: false,
-      loadPrevNext: false,
-    },
-    // переключение при клике на слайд
-    slideToClickedSlide: true,
-    // отключение прокрутки при наведении мыши
-    on: {
-      init() {
-        this.el.addEventListener("mouseenter", () => {
-          this.autoplay.stop();
-        });
-
-        this.el.addEventListener("mouseleave", () => {
-          this.autoplay.start();
-        });
+      992: {
+        spaceBetween: 30,
+        slidesPerView:3
+      },
+      1180: {
+        slidesPerView:4
+      },
+      1361: {
+        spaceBetween: 40,
+        slidesPerView:5
       },
     },
-    //
   });
-  //----- END
 }

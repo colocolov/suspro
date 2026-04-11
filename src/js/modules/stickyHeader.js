@@ -15,6 +15,9 @@ const initStickyHeader = () => {
     );
   };
 
+  // document.documentElement.style.setProperty("--anchor-offset", `${header.offsetHeight + 16}px`);
+
+
   const enableSticky = () => {
     if (isSticky) return;
     clearTimeout(hideTimer);

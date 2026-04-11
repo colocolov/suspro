@@ -1,0 +1,127 @@
+﻿.calc
+  padding-top: var(--sectionPaddingTop)
+  padding-bottom: var(--sectionPaddingBottom)
+
+  &__head
+    margin-bottom: 40px
+
+  &__wrap
+    background: linear-gradient(180deg, rgba(188, 217, 240, 0.35) 0%, rgba(188, 217, 240, 0.45) 100%)
+    padding: 54px 0 62px
+
+  &__inner
+    max-width: 760px
+    margin: 0 auto
+
+  &__text
+    margin-bottom: 36px
+    text-align: center
+
+  &__title
+    text-align: center
+    margin-bottom: 6px
+    @include font(700, 24, 26)
+
+  &__subtitle
+    margin: 0
+    color: rgba($text, 0.9)
+    @include font(500, 24, 26)
+    @include mediaPhoneMid
+      @include font(500, 18, 22)
+
+  &__form
+    display: grid
+    gap: 22px
+
+  &__row
+    display: grid
+    grid-template-columns: 1fr 1fr
+    gap: 28px
+    @include mediaPhone
+      grid-template-columns: 1fr
+
+  &__field
+    min-width: 0
+    &--select
+      position: relative
+      &::after
+        content: ''
+        position: absolute
+        right: 10px
+        bottom: 17px
+        width: 11px
+        height: 11px
+        border-right: 3px solid rgba($text, 0.85)
+        border-bottom: 3px solid rgba($text, 0.85)
+        transform: rotate(45deg)
+        pointer-events: none
+    &--phone
+      margin-bottom: 18px
+
+  &__label
+    display: none
+
+  &__control
+    width: 100%
+    border: 0
+    border-bottom: 1px solid rgba($text, 0.6)
+    padding: 3px 32px 9px 0
+    background: transparent
+    color: $text
+    text-transform: lowercase
+    font-family: $font-first
+    @include font(500, 20, 24)
+    transition: border-color 0.25s ease, padding-left 0.3s ease
+    &::placeholder
+      color: rgba($text, 0.45)
+    &:focus
+      outline: none
+      border-bottom-color: $text
+      padding-left: 15px
+
+  &__select
+    appearance: none
+    cursor: pointer
+    color: rgba($text, 0.5)
+    padding: 5px 32px 5px 12px
+    option
+      padding: 5px 0 5px 12px
+      background-color: $white
+      color: $text
+      &:hover
+        background-color: #f2f2f2
+
+  input[type='number']
+    -moz-appearance: textfield
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button
+      -webkit-appearance: none
+      margin: 0
+
+  &__phone
+    display: flex
+    align-items: center
+    border-bottom: 1px solid rgba($text, 0.6)
+    .calc__control
+      border-bottom: 0
+      padding-right: 0
+      padding-left: 10px
+      padding-bottom: 5px
+
+  &__prefix
+    flex: 0 0 auto
+    font-family: $font-first
+    color: rgba($text, 0.45)
+    @include font(500, 20, 24)
+    @include mediaPhoneMid
+      @include font(700, 28, 28)
+
+  &__control--phone
+    &::placeholder
+      color: rgba($text, 0.45)
+
+  &__submit
+    width: 100%
+    border-radius: 18px
+    text-transform: uppercase
+    letter-spacing: 0.02em

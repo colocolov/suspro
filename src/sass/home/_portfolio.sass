@@ -1,0 +1,66 @@
+﻿.portfolio
+  padding-top: var(--sectionPaddingTop)
+  padding-bottom: var(--sectionPaddingBottom)
+  overflow: hidden
+
+  &__head-wrap
+    padding: 0 40px
+    margin-bottom: 28px
+    @include mediaPhone
+      padding: 0 15px
+
+  &__head
+    margin-bottom: 50px
+
+  &__slider
+    position: relative
+    width: 100%
+    overflow: hidden
+    // padding: 88px 0 18px
+
+  &__wrapper
+    display: flex
+    align-items: flex-end
+
+  &__slide
+    flex-shrink: 0
+    width: min(26vw, 300px)
+    height: min(35vw, 400px)
+    transition: transform 0.45s ease, opacity 0.45s ease, filter 0.45s ease, height 0.75s ease-in-out
+    // transform: translateY(40px)
+    opacity: 0.8
+    filter: saturate(0.95)
+    @include mediaTablet
+      width: min(34vw, 290px)
+      height: min(48vw, 420px)
+      transform: translateY(24px)
+    @include mediaPhone
+      width: min(64vw, 280px)
+      height: min(86vw, 360px)
+      transform: translateY(16px)
+
+  &__slide.swiper-slide-active
+    width: min(36vw, 405px)
+    height: min(48vw, 540px)
+    // transform: translateY(0)
+    opacity: 1
+    filter: saturate(1)
+    @include mediaTablet
+      width: min(48vw, 420px)
+      height: min(64vw, 560px)
+    @include mediaPhone
+      width: min(78vw, 340px)
+      height: min(100vw, 470px)
+
+  &__media
+    height: 100%
+    width: 100%
+    overflow: hidden
+    // background-color: rgba($text, 0.08)
+
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+      object-position: center
+      display: block
