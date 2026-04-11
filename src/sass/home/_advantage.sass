@@ -1,0 +1,68 @@
+.advantage
+  padding-top: var(--sectionPaddingTop)
+  padding-bottom: var(--sectionPaddingBottom)
+
+  &__container
+  &__head
+    margin-bottom: 40px
+  &__wrap
+    display: flex
+    flex-direction: column
+  &__warranty
+    display: flex
+    width: 100%
+    @media (any-hover: hover) and (pointer: fine)
+      &:hover
+        & img
+          transform: scale(1.03)
+    & span
+      color: $red
+    &--left
+      flex-basis: 50%
+      display: flex
+      align-items: flex-end
+      flex-direction: column
+      p
+        font-family: $font-second
+        font-weight: 600
+        font-size: 24px
+        max-width: 390px
+        margin-left: auto
+    &--img
+      max-height: 295px
+      overflow: hidden
+      img
+        transition: transform 0.7s ease-in
+        object-fit: cover
+    &--right
+      flex-basis: 50%
+      font-family: $font-second
+      font-weight: 600
+      font-size: 24px
+      max-width: 390px
+      margin-top: auto
+      padding: 10px
+  &__free
+    display: flex
+    width: 100%
+    @media (any-hover: hover) and (pointer: fine)
+      &:hover
+        & .advantage__free--left
+          color: $red
+        & img
+          transform: scale(1.03)
+
+    &--left
+      flex-basis: 50%
+      font-family: $font-second
+      font-weight: 600
+      font-size: 60px
+      padding-left: 52px
+      transition: color 0.3s ease-in
+    &--img
+      flex-basis: 50%
+      max-height: 330px
+      overflow: hidden
+      img
+        transition: transform 0.7s ease-in
+        object-fit: cover
