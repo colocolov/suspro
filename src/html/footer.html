@@ -1,3 +1,27 @@
-<footer class="footer">
-  <div class="footer__container">Footer</div><!-- /.container -->
+<footer class="footer" id="contacts">
+  <div class="footer__wrap">
+
+    <div class="footer__name">
+      <div class="footer__container">
+        <div class="footer__title">
+          КОНТАКТЫ
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__contacts">
+      <div class="footer__container">
+        @include('contacts/contact-form.html')
+
+        @include('components/_social.html')
+      </div><!-- /.container -->
+    </div>
+
+  </div>
+
+  <div class="footer__copyright">
+    <a href="#" target="_blank" class="footer__ref">
+      <img src="@img/ref.svg" loading="lazy" width="61" height="25" alt="">
+    </a>
+  </div>
 </footer><!-- /.footer -->

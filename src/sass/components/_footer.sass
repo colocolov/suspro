@@ -1,7 +1,50 @@
 .footer
-  background-color: #3e3e3e
-  padding: 60px 0
-  color: $white
+  background-color: $bgc
+  padding-top: var(--sectionPaddingTop)
+
+  &__wrap
+    display: flex
+
+  &__container
+
+  &__name
+    background: $gradient-dark
+    flex-basis: 50%
+    display: flex
+    align-items: center
+    justify-content: center
+    position: relative
+    &::before
+      content: ''
+      position: absolute
+      bottom: 60px
+      left: 60px
+      width: 256px
+      height: 190px
+      background: url("../images/icons/subtract.svg") center / cover no-repeat
+    &::after
+      content: ''
+      position: absolute
+      top: 60px
+      right: 60px
+      width: 256px
+      height: 190px
+      background: url("../images/icons/subtract.svg") center / cover no-repeat
+      transform: rotate(180deg)
+
+  &__title
+    text-transform: uppercase
+    font-family: $font-second
+    font-weight: 600
+    font-size: 60px
+    text-align: center
+    color: $bgc
+
+  &__contacts
+    flex-basis: 50%
+    padding: 50px 30px 20px
+    background-color: #DADADA
+    //color: rgba($text, 0.5)
 
   &__item
     transition: color 0.3s ease
@@ -10,3 +53,12 @@
     a
       cursor: pointer
 
+
+  &__copyright
+    background-color: $white
+    padding: 27px 0
+  &__ref
+    margin: 0 auto
+    display: block
+    width: 61px
+    height: 25px
