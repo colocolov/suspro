@@ -8,15 +8,18 @@
   // margin-left: 50px
   &__body
     // margin-top: -5px
-    @include mediaPhone
+    // @include mediaPhone
+    @include mediaTablet
       position: fixed
       top: 0
       right: -100%
       width: 100%
       height: 100%
+      min-height: 100vh
       padding: 150px 30px 50px 30px
       // ---------- ЦВЕТ ФОНА У МЕНЮ
-      background-color: rgba($text, 0.9)
+      background-color: rgba($text, 0.98)
+      backdrop-filter: blur(10px)
       overflow: auto
       transition: right 0.3s ease
       z-index: 2
@@ -46,10 +49,11 @@
     flex-wrap: wrap
     column-gap: 39px
     justify-content: flex-end
-    row-gap: 10px
+    // row-gap: 10px
     @include mediaNotebook
       // flex-wrap: wrap
-    @include mediaPhone
+    // @include mediaPhone
+    @include mediaTablet
       flex-direction: column
       align-items: flex-end
       justify-content: flex-start
@@ -82,10 +86,8 @@
         color: $red
         // &:last-child a
         //   color: $white
-      @include mediaNotebook
-        padding: 15px 10px
-        margin-bottom: 7px
-      @include mediaPhone
+      @include mediaTablet
+
         width: 100%
         padding: 10px 0px
         margin-bottom: 0
@@ -181,7 +183,8 @@
     //       transform: translate(0px, 0px)
     //     .menu__arrow
     //       transform: rotate(-180deg)
-    @include mediaPhone
+    // @include mediaPhone
+    @include mediaTablet
       margin-bottom: 10px
       font-weight: 800
       font-size: 32px
@@ -236,7 +239,8 @@
 
   &__icon
     display: none
-    @include mediaPhone
+    // @include mediaPhone
+    @include mediaTablet
       display: block
       position: relative
       //flex: 0 0 32px
@@ -293,7 +297,8 @@
         top: 0 !important
     & li:before
       content: none
-    @include mediaPhone
+    @include mediaTablet
+
       align-self: flex-end
       order: 1
       & li
@@ -323,7 +328,7 @@
               background-color: $black
 
     // меню языков в строку на мобилках 
-    @include mediaPhone
+    @include mediaTablet
       & li
         display: flex
         align-items: center

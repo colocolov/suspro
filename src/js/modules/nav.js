@@ -100,7 +100,7 @@ function removeActiveClass() {
 
 // активный язык для Polylang
 const menuLang = document.querySelector('.menu-languages');
-const mediaQuery = window.matchMedia('(max-width: 767px)');
+const mediaQuery = window.matchMedia('(max-width: 768px)');
 if (menuLang && menuLang.firstElementChild) {
   if (mediaQuery.matches) {
     menuLang.firstElementChild.classList.add('current-languages');

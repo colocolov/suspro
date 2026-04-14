@@ -52,20 +52,34 @@
       border-radius: 1.5em
 
   &__logo
+    width: 267px
+    height: 35px
+    flex-shrink: 0
     // margin-right: auto
     @include mediaPhone
-      z-index: 5
+      // z-index: 5
+      width: 182px
+      height: 24px
 
   &__menu
     margin-right: 50px
+    @include mediaTablet
+      order: 2
+      margin-right: 0
 
   &__phone
     font-weight: 700
     font-size: 16px
     transition: color 0.3s ease-in
+    flex-shrink: 0
     @media (any-hover: hover) and (pointer: fine)
       &:hover
         color: $red
+    @include mediaPhone
+      order: 3
+      color: $bgc
+      font-size: 20px
+      text-align: right
 
 
 /* Базовые настройки для частей крыши */

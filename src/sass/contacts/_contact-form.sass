@@ -7,6 +7,8 @@
     column-gap: 20px
     row-gap: 70px
     margin-bottom: 40px
+    @include mediaPhoneMid
+      row-gap: 30px
   &__line
     border-bottom: 1px solid $text
     flex: 1 1 48%
@@ -14,7 +16,7 @@
     p
       width: 100%
     @include mediaPhoneMid
-      margin-right: 40px
+      // margin-right: 40px
   &__input
     background-color: transparent
     height: 34px
