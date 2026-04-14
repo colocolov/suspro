@@ -13,15 +13,26 @@
       <div class="footer__container">
         @include('contacts/contact-form.html')
 
-        @include('components/_social.html')
+        <a href="mailto:suspro.srl@mail.ru" class="footer__email">suspro.srl@mail.ru</a>
+        <div class="footer__socials">
+          <a href="tel:+37360049837" class="footer__phone">+373 600 49 837</a>
+          @include('components/_social.html')
+        </div>
       </div><!-- /.container -->
     </div>
 
   </div>
 
   <div class="footer__copyright">
-    <a href="#" target="_blank" class="footer__ref">
-      <img src="@img/ref.svg" loading="lazy" width="61" height="25" alt="">
-    </a>
+    <div class="footer__ref">
+      <a href="#1" class="footer__ref-ss" target="_blank">
+        <svg class="" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
+          <use xlink:href="images/icons/instagram.svg"></use>
+        </svg>
+      </a>
+      <a href="#2" target="_blank" class="footer__ref-site">
+        <img src="@img/ref.svg" loading="lazy" width="61" height="25" alt="">
+      </a>
+    </div>
   </div>
 </footer><!-- /.footer -->

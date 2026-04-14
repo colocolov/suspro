@@ -1,9 +1,17 @@
 .social
   display: flex
   align-items: center
+  gap: 40px
   li
     &:not(:last-child)
       margin-right: 30px
+    @media (any-hover: hover) and (pointer: fine)
+      &:hover
+        a
+          color: $red
+  a
+    color: #000
+    transition: color 0.4s ease-in
   svg
     width: 30px
     height: 30px

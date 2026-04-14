@@ -6,6 +6,7 @@
     display: flex
 
   &__container
+    max-width: calc(1360px / 2)
 
   &__name
     background: $gradient-dark
@@ -53,12 +54,48 @@
     a
       cursor: pointer
 
+  &__form
+    margin-bottom: 32px
+
+  &__email
+    font-family: $font-second
+    font-weight: 600
+    font-size: 34px
+    margin: 0 auto
+    display: block
+    text-align: center
+    margin-bottom: 12px
+    transition: color 0.3s ease-in
+    @media (any-hover: hover) and (pointer: fine)
+      &:hover
+        color: $red
+
+
+  &__socials
+    display: flex
+    align-items: center
+    justify-content: center
+    gap: 40px
+
+  &__phone
+    // display: block
+    font-weight: 700
+    transition: color 0.3s ease-in
+    @media (any-hover: hover) and (pointer: fine)
+      &:hover
+        color: $red
 
   &__copyright
     background-color: $white
     padding: 27px 0
   &__ref
     margin: 0 auto
-    display: block
-    width: 61px
+    display: flex
+    align-items: center
+    justify-content: center
+    gap: 14px
+    // width: 61px
     height: 25px
+    &-ss
+      width: 26px
+      height: 26px
