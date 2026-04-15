@@ -27,11 +27,12 @@
       // подложка под верхнее меню, если оно имеет фон
       &::before
         content: ''
-        position: fixed
+        position: sticky
         top: 0
+        left: 0
         right: -100%
         width: 100%
-        height: 100px
+        height: 80px
         // ---------- ЦВЕТ ФОНА У ШАПКИ
         background-color: $black
         // background-color: $text

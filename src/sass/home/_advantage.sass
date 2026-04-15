@@ -5,6 +5,8 @@
   &__container
   &__head
     margin-bottom: 40px
+    @include mediaPhone
+      margin-bottom: 20px
   &__wrap
     display: flex
     flex-direction: column
@@ -15,6 +17,8 @@
       &:hover
         & img
           transform: scale(1.03)
+    @include mediaPhone
+      flex-direction: column
     & span
       color: $red
     &--left
@@ -28,6 +32,9 @@
         font-size: 24px
         max-width: 390px
         margin-left: auto
+        @include mediaPhone
+          margin-left: 0
+          margin-right: auto
     &--img
       max-height: 295px
       overflow: hidden
@@ -51,14 +58,22 @@
           color: $red
         & img
           transform: scale(1.03)
+    @include mediaPhone
+      flex-direction: column-reverse
 
     &--left
       flex-basis: 50%
       font-family: $font-second
       font-weight: 600
-      font-size: 60px
-      padding-left: 52px
+      // font-size: 60px
+      @include font-size(60, 38)
+      // padding-left: 52px
       transition: color 0.3s ease-in
+      @include mediaTablet
+        font-size: 37px
+      @include mediaPhone
+        font-size: 30px
+
     &--img
       flex-basis: 50%
       max-height: 330px

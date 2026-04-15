@@ -4,10 +4,14 @@
 
   &__head
     margin-bottom: 40px
+    @include mediaPhone
+      margin-bottom: 20px
 
   &__wrap
     background: linear-gradient(180deg, rgba(188, 217, 240, 0.35) 0%, rgba(188, 217, 240, 0.45) 100%)
     padding: 54px 0 62px
+    @include mediaPhone
+      padding: 35px 0
 
   &__inner
     max-width: 760px
@@ -16,16 +20,23 @@
   &__text
     margin-bottom: 36px
     text-align: center
+    @include mediaPhone
+      text-align: left
 
   &__title
     text-align: center
     margin-bottom: 6px
     @include font(700, 24, 26)
+    @include mediaPhone
+      text-align: left
 
   &__subtitle
     margin: 0
     color: rgba($text, 0.9)
     @include font(500, 24, 26)
+    @include mediaPhone
+      max-width: 75%
+      text-align: left
     @include mediaPhoneMid
       @include font(500, 18, 22)
 
@@ -113,8 +124,6 @@
     font-family: $font-first
     color: rgba($text, 0.45)
     @include font(500, 20, 24)
-    @include mediaPhoneMid
-      @include font(700, 28, 28)
 
   &__control--phone
     &::placeholder

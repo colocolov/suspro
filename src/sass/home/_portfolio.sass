@@ -11,11 +11,19 @@
 
   &__head
     margin-bottom: 50px
+    @include mediaPhoneMid
+      margin-bottom: 30px
 
   &__slider
     position: relative
     width: 100%
     overflow: hidden
+    height: 540px
+    @include mediaTablet
+      height: 470px
+    @include mediaPhone
+      height: 300px
+
     // padding: 88px 0 18px
 
   &__wrapper
@@ -31,12 +39,12 @@
     opacity: 0.8
     filter: saturate(0.95)
     @include mediaTablet
-      width: min(34vw, 290px)
-      height: min(48vw, 420px)
+      width: min(34vw, 280px)
+      height: min(48vw, 360px)
       transform: translateY(24px)
     @include mediaPhone
-      width: min(64vw, 280px)
-      height: min(86vw, 360px)
+      width: min(64vw, 168px)
+      height: min(86vw, 225px)
       transform: translateY(16px)
 
   &__slide.swiper-slide-active
@@ -46,11 +54,11 @@
     opacity: 1
     filter: saturate(1)
     @include mediaTablet
-      width: min(48vw, 420px)
-      height: min(64vw, 560px)
+      width: min(48vw, 340px)
+      height: min(64vw, 470px)
     @include mediaPhone
-      width: min(78vw, 340px)
-      height: min(100vw, 470px)
+      width: min(78vw, 205px)
+      height: min(100vw, 300px)
 
   &__media
     height: 100%

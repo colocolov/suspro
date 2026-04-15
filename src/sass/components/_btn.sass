@@ -59,8 +59,9 @@ a.btn
     width: 640px
   @include mediaTablet
     width: 735px
+    top: 0
   @include mediaPhone
-    width: 90%
+    width: 98%
 
   &__btn
     display: flex
@@ -87,3 +88,6 @@ a.btn
           transform: translateX(5px)
     &:focus
       outline: none
+    @include mediaPhoneSm
+      width: 80px
+      height: 36px

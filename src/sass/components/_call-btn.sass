@@ -1,0 +1,88 @@
+.call-btn
+  position: fixed
+  bottom: 25px
+  right: 25px
+  width: 50px
+  // height: 54px
+  // background-color: #4d8399
+  color: #000
+  border-radius: 50%
+  // padding: 5px
+  display: flex
+  align-items: center
+  justify-content: center
+  z-index: 99
+  filter: drop-shadow(1px 2px 5px rgba(51, 65, 78, 0.5))
+  animation: pulse 5s ease 0.5s infinite normal none
+  @include mediaPhoneMid
+    animation: none
+    width: 100%
+    bottom: 0
+    right: 0
+    left: 0
+    border-radius: 0
+    padding: 20px 10px
+    justify-content: space-evenly
+    // height: calc(100px + env(safe-area-inset-bottom))
+    background-color: unset
+    backdrop-filter: blur(6px)
+    gap: 15px
+    box-shadow: 0 -7px 9px -7px rgba(0, 0, 0, 0.3)
+    // padding-bottom: env(safe-area-inset-bottom)
+
+
+  &--viber
+    display: none
+    width: 0
+    height: 0
+    @include mediaPhoneMid
+      display: flex
+      align-items: center
+      justify-content: center
+      flex-direction: column
+      gap: 3px
+      width: auto
+      height: 28px
+      flex-basis: 32%
+      font-size: 15px
+      color: #8e24aa
+
+
+  &--phone
+    img
+      width: 50px !important
+      height: 50px !important
+    @include mediaPhoneMid
+      // background-color: $red
+      // height: 50px
+      // width: 50px
+      // padding: 7px
+      // border-radius: 50%
+      display: flex
+      align-items: center
+      justify-content: center
+      animation: myAnimRot 2s ease 1s infinite forwards
+      flex-shrink: 0
+
+
+
+  &--whatsapp
+    display: none
+    width: 0
+    height: 0
+    @include mediaPhoneMid
+      display: flex
+      flex-direction: column
+      justify-content: center
+      color: red
+      align-items: center
+      gap: 3px
+      width: auto
+      height: 28px
+      flex-basis: 32%
+      color: #3caf44
+      font-size: 15px
+
+  & img
+    width: 40px
+    height: 40px

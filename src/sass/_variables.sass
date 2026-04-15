@@ -76,3 +76,12 @@ $mobileSmall: 479.98px // Телефоны S - 480px
       width: 46px
       height: 42px
       background: $text url("../images/icons/home.svg") center / 26px no-repeat
+    @include mediaPhone
+      font-size: 30px
+      margin-left: 0
+      padding: 0 2px
+      width: auto
+      max-width: unset
+      display: inline-block
+      &::before
+        content: none

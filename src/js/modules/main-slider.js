@@ -9,7 +9,7 @@ if (portfolioSlider) {
     loop: true,
     speed: 700,
     centeredSlides: true,
-    slidesPerView: 2,
+    slidesPerView: 1.7,
     spaceBetween: 10,
     initialSlide: 3, 
     // watchSlidesProgress: true,
@@ -21,10 +21,12 @@ if (portfolioSlider) {
     },
 
     breakpoints: {
-      0: {
+      576: {
+        slidesPerView:2,
         spaceBetween: 12,
       },
       768: {
+        slidesPerView:2.5,
         spaceBetween: 20,
       },
       992: {

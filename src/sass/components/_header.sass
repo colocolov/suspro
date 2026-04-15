@@ -1,33 +1,64 @@
+:root
+  --header-height: 80px
 .header
-  position: relative
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
   padding: 32px 0
   box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.2)
-  z-index: 3
+  z-index: 100
+
+  height: var(--header-height)
+  // padding: 0
+  display: flex
+  align-items: center
+  // transition: transform 0.28s ease, opacity 0.28s ease
   // @include mediaTablet
   //   position: fixed
   //   background-color: $text
   //   box-shadow: 0 1px 35px 0 rgba($black, 0.1)
   //   z-index: 100
   //   width: 100%
+  backdrop-filter: blur(10px)
 
-  transition: transform 0.28s ease, opacity 0.28s ease, box-shadow 0.28s ease, background-color 0.28s ease
-  will-change: transform, opacity
+  // transition: transform 0.28s ease, opacity 0.28s ease, box-shadow 0.28s ease, background-color 0.28s ease
+  // will-change: transform, opacity
 
-  &.is-fixed
-    position: fixed
-    top: 0
-    left: 0
-    width: 100%
-    z-index: 100
-    transform: translateY(-110%)
-    opacity: 0
-    padding: 18px 0
-    backdrop-filter: blur(10px)
+  // &-wrapper
+  //   height: var(--header-height)
 
-    &.is-fixed.is-visible
-      transform: translateY(0)
-      opacity: 1
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25)
+  // &.is-hidden
+  //   transform: translateY(-100%)
+
+  // // Когда скроллим вверх или в самом верху — показываем с тенью
+  // &.is-visible
+  //   transform: translateY(0)
+  //   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1)
+
+
+
+  // &.is-scrolled
+  //   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15)
+  //   padding: 16px 0 // Пример: сужаем хедер при скролле
+  //   backdrop-filter: blur(10px)
+  //   background-color: rgba(255, 255, 255, 0.8)
+
+  // &.is-fixed
+  //   position: fixed
+  //   top: 0
+  //   left: 0
+  //   width: 100%
+  //   z-index: 100
+  //   transform: translateY(0)
+  //   opacity: 1
+  //   // padding: 18px 0
+  //   backdrop-filter: blur(10px)
+
+  // &.is-fixed.is-visible
+  //   transform: translateY(0)
+  //   opacity: 1
+  //   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25)
 
 
   // @include mediaPhone
