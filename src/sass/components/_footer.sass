@@ -123,5 +123,15 @@
     // width: 61px
     height: 25px
     &-ss
-      width: 26px
-      height: 26px
+      svg
+        width: 26px
+        height: 26px
+        transition: fill 0.4s ease-in
+        fill: $text
+        &.instagram
+          stroke: $bgc
+          // stroke-width: 2
+      @media (any-hover: hover) and (pointer: fine)
+      &:hover
+        svg.instagram
+          fill: $red

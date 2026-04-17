@@ -8,11 +8,14 @@
       margin-right: 30px
     @media (any-hover: hover) and (pointer: fine)
       &:hover
-        a
-          color: $red
+        svg
+          fill: $red
   a
-    color: #000
-    transition: color 0.4s ease-in
+    // color: #000
   svg
+    transition: fill 0.4s ease-in
     width: 30px
     height: 30px
+    fill: $text
+    &.instagram
+      stroke: $bgc
