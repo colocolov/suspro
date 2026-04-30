@@ -18,7 +18,8 @@
 @mixin font-size($pcSize, $mobSize)
   $addSize: $pcSize - $mobSize
   $maxWidth: $containerWidth - 320
-  font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}))
+  // font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}))
+  font-size: clamp(#{$mobSize}px, calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth})), #{$pcSize}px)
 
 @mixin fx-all
   display: flex
